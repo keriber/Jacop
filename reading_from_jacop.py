@@ -8,9 +8,11 @@ Created on Tue Jun 23 10:50:27 2015
 import pandas as pd
 import os
 
-path = 'F:\\David_Fenyos\\Image_Analysis\\General_measurements\\Testing_Jacob\\Our_Thr_Basal_Log_files\\'
+path = 'C:\\Users\\keriambermudez\\Dropbox\\David_Fenyos_Lab\\Image_Analysis\\Testing_Jacop\\Bleomycyn\\Masked_log_files\\'
+name = 'Bleomycin_masked'
 
 #%%
+
 tables = []
 for i in os.listdir(path):
     print(i)
@@ -49,7 +51,10 @@ all_table.ix[:,43]= icq
 all_table.columns = all_table.columns.astype(int)
 
 #%%
-all_table.to_csv('F:\\David_Fenyos\\Image_Analysis\\General_measurements\\Testing_Jacob\\Our_Thr_Bleomycin_Log_files\\Our_Thr_Basal_jacop.csv')
+all_table.to_csv(path +name+'_jacop.csv')
+
+
+
 
 #%%
    

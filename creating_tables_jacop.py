@@ -13,12 +13,18 @@ import os
 import pandas as pd
 import numpy as np
 
-path = "F:\\David_Fenyos\\Image_Analysis\\General_measurements\\Testing_Jacob\\Jacop_csvs_our_thr\\"
 #%%
-basal = pd.read_csv("F:\\David_Fenyos\\Image_Analysis\\General_measurements\\Testing_Jacob\\Our_Thr_Basal_Log_files\\Our_Thr_Basal_jacop.csv")
-bleomycin = pd.read_csv("F:\\David_Fenyos\\Image_Analysis\\General_measurements\\Testing_Jacob\\Our_Thr_Bleomycin_Log_files\\Our_Thr_Bleomycin_jacop.csv")
+
+path = "C:\\Users\\keriambermudez\\Dropbox\\David_Fenyos_Lab\\Image_Analysis\\Testing_Jacop\\Basal_bleomycin_masked_cvs\\"
+
 
 #%%
+
+basal = pd.read_csv("C:\\Users\\keriambermudez\\Dropbox\\David_Fenyos_Lab\\Image_Analysis\\Testing_Jacop\\Basal\\Masked_log_files\\Basal_masked_jacop.csv")
+bleomycin = pd.read_csv("C:\\Users\\keriambermudez\\Dropbox\\David_Fenyos_Lab\\Image_Analysis\\Testing_Jacop\\Bleomycyn\\Masked_log_files\\Bleomycin_masked_jacop.csv")
+
+#%%
+
 icq = DataFrame([basal.ix[:,'43'],bleomycin.ix[:,'43']], index=['basal','bleomycin'])
 icq = icq.transpose()
 icq.to_csv(path+"ICQ.csv")

@@ -6,12 +6,12 @@ Created on Sun Jun 28 23:20:02 2015
 
 """
 from skimage import io, measure, exposure, util
-import mahotas
 from scipy import ndimage
 import numpy as np
 import os
 from  matplotlib import pyplot as plt
-path = 'F:\\David_Fenyos\\Image_Analysis\\General_measurements\\Testing_Jacob\\Bleomycyn\\'
+
+path = 'C:\\Users\\keriambermudez\\Dropbox\\David_Fenyos_Lab\\Image_Analysis\\Testing_Jacop\\Bleomycyn\\Bleomycyn\\'
 
 for root, dirs, files in os.walk(path):
      for folder in dirs:
